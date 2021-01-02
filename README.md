@@ -18,7 +18,7 @@ yarn react-base-routing
 
 ## Usage
 
-1. Create `routes.js` and paste following lines
+1. Create `routes.js` with paths schema like this
 
 ```js
 import { AuthLayout, DefaultLayout } from './layouts';
@@ -53,7 +53,7 @@ export default [
 ];
 ```
 
-2. On your `App.js` include this component
+2. On your `App.js` include router component
 
 ```js
 import React from 'react';
@@ -67,13 +67,51 @@ const App = () => {
 
 ## Advanced
 
-You can handle 404 route by passing `notFoundPage` prop to base component
+1. You can handle 404 route by passing `notFoundPage` prop to base component
 
 ```js
 <BaseRouting routes={routes} notFoundPage={NotFoundPage} />
 ```
 
 > 404 page not use layout. This is only page
+
+2. You can use `BaseRouting` with simple routing schema (without layouts)
+
+-   create simple paths schema like this
+
+```js
+import { AboutPage, HomePage, LoginPage } from './pages';
+
+export default [
+    {
+        path: '/login',
+        exact: true,
+        component: LoginPage,
+    },
+    {
+        path: '/',
+        exact: true,
+        component: HomePage,
+    },
+    {
+        path: '/about',
+        exact: true,
+        component: AboutPage,
+    },
+];
+```
+
+-   in `App.js` set `schema` prop to `simple`
+
+```js
+import React from 'react';
+import { BaseRouting } from 'react-base-routing';
+import routes from './routes';
+
+const App = () => {
+    return <BaseRouting routes={routes} schema="simple" />;
+};
+```
 
 ## Code Example
 
