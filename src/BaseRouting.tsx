@@ -10,7 +10,7 @@ const BaseRouting: React.FC<BaseRoutingProps> = ({
     const paths: string[] = routes
         .map((layout) => layout.routes.map((route) => route.path))
         .flat(1);
-    console.log(paths);
+
     return (
         <BrowserRouter>
             <Switch>
