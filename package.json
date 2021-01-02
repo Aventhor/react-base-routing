@@ -1,5 +1,6 @@
 {
     "name": "react-base-routing",
+    "description": "React package for layout based routing",
     "version": "1.0.0",
     "author": "aventhor",
     "main": "dist/index.js",
@@ -8,6 +9,10 @@
     "files": [
         "dist"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Aventhor/react-base-routing.git"
+    },
     "license": "MIT",
     "scripts": {
         "watch": "rollup -cw",
