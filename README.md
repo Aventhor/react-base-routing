@@ -4,15 +4,19 @@ Layout based router for react. Used [react-router-dom](https://www.npmjs.com/pac
 
 ## Installation
 
-`npm i react-base-routing`  
-or  
-`yarn react-base-routing`
+```
+npm i react-base-routing
+```
+or
+```
+yarn react-base-routing
+```
 
 ## Usage
 
 1. Create `routes.js` and paste following lines
 
-```
+```js
 import { AuthLayout, DefaultLayout } from './layouts';
 import { AboutPage, HomePage, LoginPage } from './pages';
 
@@ -47,7 +51,7 @@ export default [
 
 2. On your `App.js` paste this line
 
-```
+```js
 const App = () => {
     return <BaseRouting routes={routes} />;
 };
@@ -57,7 +61,7 @@ const App = () => {
 
 You can handle 404 route by passing `notFoundPage` prop to base component
 
-```
+```js
 <BaseRouting routes={routes} notFoundPage={NotFoundPage} />;
 ```
 
