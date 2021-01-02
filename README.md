@@ -1,3 +1,4 @@
+[![NPM](https://img.shields.io/npm/v/react-base-routing.svg)](https://www.npmjs.com/package/react-base-routing)
 # react base routing
 
 Layout based router for react. Used [react-router-dom](https://www.npmjs.com/package/react-router-dom). Layout state is not reset when navigating to pages of the same layout
