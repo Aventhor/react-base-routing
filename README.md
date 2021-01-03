@@ -53,6 +53,35 @@ export default [
 ];
 ```
 
+Create your default layout. Each layout must have `children` prop to render pages
+
+```js
+import React from 'react';
+
+const DefaultLayout = ({ children }) => {
+    return (
+        <main>
+            <h4>Default Layout</h4>
+            {children}
+        </main>
+    );
+};
+
+export default DefaultLayout;
+```
+
+Create simple page
+
+```js
+import React from 'react';
+
+const HomePage = () => {
+    return <h1>Home Page</h1>;
+};
+
+export default HomePage;
+```
+
 2. On your `App.js` include router component
 
 ```js
@@ -77,7 +106,7 @@ const App = () => {
 
 2. You can use `BaseRouting` with simple routing schema (without layouts)
 
--   create simple paths schema like this
+Create simple paths schema like this
 
 ```js
 import { AboutPage, HomePage, LoginPage } from './pages';
@@ -101,7 +130,7 @@ export default [
 ];
 ```
 
--   in `App.js` set `schema` prop to `simple`
+In your `App.js` set `schema` prop to `simple`
 
 ```js
 import React from 'react';
