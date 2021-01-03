@@ -1,5 +1,5 @@
-export type AppRoute = {
+export interface AppRoute {
     path: string;
     component: any;
     exact?: boolean;
-};
+}

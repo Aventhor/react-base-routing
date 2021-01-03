@@ -53,7 +53,7 @@ export default [
 ];
 ```
 
-Create your default layout. Each layout must have `children` prop to render pages
+Create your layout. Each layout must have `children` prop to render pages
 
 ```js
 import React from 'react';

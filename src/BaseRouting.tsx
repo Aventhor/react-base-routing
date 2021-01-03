@@ -11,6 +11,9 @@ const BaseRouting: React.FC<BaseRoutingProps> = ({
     notFoundPage: NotFoundComponentPage,
     schema = 'layout',
 }) => {
+    if (pathsManager.isRoutesArrayEmpty(routes)) {
+        throw new Error('Routes array is empty');
+    }
     const isLayoutRoutes = pathsManager.isLayoutRoute(routes[0]);
     const isAppRoutes = pathsManager.isAppRoute(routes[0]);
 

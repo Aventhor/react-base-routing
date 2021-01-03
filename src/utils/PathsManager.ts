@@ -10,6 +10,12 @@ class PathsManager {
         return 'layout' in object;
     }
 
+    public isRoutesArrayEmpty = (
+        routes: LayoutRoute[] | AppRoute[]
+    ): boolean => {
+        return routes.length === 0;
+    };
+
     public getPaths(routes: LayoutRoute[]): string[] {
         return routes
             .map((layout) => layout.routes.map((route) => route.path))
