@@ -9,15 +9,15 @@ const App: React.FC = () => {
     return <BaseRouting routes={layoutRoutes} notFoundPage={NotFoundPage} />;
 };
 
-const AppWithSimpleRoutes: React.FC = () => {
-    return (
-        <BaseRouting
-            routes={simpleRoutes}
-            notFoundPage={NotFoundPage}
-            schema="simple"
-        />
-    );
-};
+// const AppWithSimpleRoutes: React.FC = () => {
+//     return (
+//         <BaseRouting
+//             routes={simpleRoutes}
+//             notFoundPage={NotFoundPage}
+//             schema="simple"
+//         />
+//     );
+// };
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
