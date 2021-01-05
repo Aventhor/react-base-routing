@@ -9,6 +9,7 @@ const App: React.FC = () => {
     return <BaseRouting routes={layoutRoutes} notFoundPage={NotFoundPage} />;
 };
 
+/*eslint-disable */
 const AppWithSimpleRoutes: React.FC = () => {
     return (
         <BaseRouting
