@@ -1,5 +1,6 @@
+import { LayoutRoute } from 'react-base-routing';
 import { AuthLayout, DefaultLayout } from './layouts';
-import { AboutPage, HomePage, LoginPage } from './pages';
+import { AboutPage, ContactsPage, HomePage, LoginPage } from './pages';
 
 export default [
     {
@@ -25,6 +26,11 @@ export default [
                 exact: true,
                 component: AboutPage,
             },
+            {
+                path: '/contacts',
+                exact: true,
+                component: ContactsPage,
+            },
         ],
     },
-];
+] as LayoutRoute[];

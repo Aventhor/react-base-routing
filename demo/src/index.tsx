@@ -5,11 +5,11 @@ import layoutRoutes from './layout-routes';
 import simpleRoutes from './simple-routes';
 import { NotFoundPage } from './pages';
 
-const App = () => {
+const App: React.FC = () => {
     return <BaseRouting routes={layoutRoutes} notFoundPage={NotFoundPage} />;
 };
 
-const AppWithSimpleRoutes = () => {
+const AppWithSimpleRoutes: React.FC = () => {
     return (
         <BaseRouting
             routes={simpleRoutes}

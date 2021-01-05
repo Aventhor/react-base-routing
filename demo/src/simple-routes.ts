@@ -1,4 +1,5 @@
-import { AboutPage, HomePage, LoginPage } from './pages';
+import { AppRoute } from 'react-base-routing';
+import { AboutPage, ContactsPage, HomePage, LoginPage } from './pages';
 
 export default [
     {
@@ -16,4 +17,9 @@ export default [
         exact: true,
         component: AboutPage,
     },
-];
+    {
+        path: '/contacts',
+        exact: true,
+        component: ContactsPage,
+    },
+] as AppRoute[];

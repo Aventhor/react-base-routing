@@ -1,0 +1,9 @@
+.list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.list > li:nth-child(even) {
+    padding: 0 0.5rem;
+}
