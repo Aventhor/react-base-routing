@@ -13,7 +13,7 @@ npm i react-base-routing
 or
 
 ```
-yarn react-base-routing
+yarn add react-base-routing
 ```
 
 ## Usage
