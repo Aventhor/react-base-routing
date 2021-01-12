@@ -1,9 +1,6 @@
-import { AppRoute } from './AppRoute';
 import { LayoutRoute } from './LayoutRoute';
+import { RoutingProps } from './RoutingProps';
 
-export interface BaseRoutingProps {
-    routes: LayoutRoute[] | AppRoute[];
-    /** component to render 404 page */
-    notFoundPage?: any;
-    schema?: 'layout' | 'simple';
+export interface BaseRoutingProps extends RoutingProps {
+    routes: LayoutRoute[];
 }

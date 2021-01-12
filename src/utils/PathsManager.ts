@@ -15,8 +15,10 @@ class PathsManager {
     ): boolean => {
         return routes.length === 0;
     };
-
-    public getPaths(routes: LayoutRoute[]): string[] {
+    public getSimplePaths(routes: AppRoute[]): string[] {
+        return routes.map((route) => route.path);
+    }
+    public getLayoutPaths(routes: LayoutRoute[]): string[] {
         return routes
             .map((layout) => layout.routes.map((route) => route.path))
             .flat(1);

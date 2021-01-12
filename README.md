@@ -104,7 +104,7 @@ const App = () => {
 
 > 404 page not use layout. This is only page
 
-2. You can use `BaseRouting` with simple routing schema (without layouts)
+2. You can use `SimpleBaseRouting` with simple routing schema (without layouts)
 
 Create simple paths schema like this
 
@@ -130,7 +130,19 @@ export default [
 ];
 ```
 
-In your `App.js` set `schema` prop to `simple`
+In your `App` include `SimpleBaseRouting` instead `BaseRouting`
+
+```js
+import React from 'react';
+import { SimpleBaseRouting } from 'react-base-routing';
+import routes from './routes';
+
+const App = () => {
+    return <SimpleBaseRouting routes={routes} />;
+};
+```
+
+3. You can pass `paths` array to any Router component
 
 ```js
 import React from 'react';
@@ -138,9 +150,12 @@ import { BaseRouting } from 'react-base-routing';
 import routes from './routes';
 
 const App = () => {
-    return <BaseRouting routes={routes} schema="simple" />;
+    const paths = ['/', '/about'];
+    return <BaseRouting routes={routes} paths={paths} />;
 };
 ```
+
+This will tell the router to show a 404 page if there is no page path in the path array.
 
 ## Live Demo
 

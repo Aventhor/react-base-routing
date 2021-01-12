@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BaseRouting } from 'react-base-routing';
+import { BaseRouting, SimpleBaseRouting } from 'react-base-routing';
 import layoutRoutes from './layout-routes';
 import simpleRoutes from './simple-routes';
 import { NotFoundPage } from './pages';
@@ -12,11 +12,7 @@ const App: React.FC = () => {
 /*eslint-disable */
 const AppWithSimpleRoutes: React.FC = () => {
     return (
-        <BaseRouting
-            routes={simpleRoutes}
-            notFoundPage={NotFoundPage}
-            schema="simple"
-        />
+        <SimpleBaseRouting routes={simpleRoutes} notFoundPage={NotFoundPage} />
     );
 };
 
