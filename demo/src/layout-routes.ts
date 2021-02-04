@@ -9,7 +9,7 @@ export default [
             {
                 path: '/login',
                 exact: true,
-                component: LoginPage,
+                render: () => LoginPage({}),
             },
         ],
     },
