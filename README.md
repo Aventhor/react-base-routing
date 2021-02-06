@@ -29,7 +29,7 @@ export default [
         layout: AuthLayout,
         routes: [
             {
-                path: '/login',
+                path: ['/login', '/sign-in'],
                 exact: true,
                 component: LoginPage,
             },
@@ -41,7 +41,7 @@ export default [
             {
                 path: '/',
                 exact: true,
-                component: HomePage,
+                render: () => HomePage({ title: 'HomePage' }),
             },
             {
                 path: '/about',
@@ -75,11 +75,11 @@ Create simple page
 ```js
 import React from 'react';
 
-const HomePage = () => {
-    return <h1>Home Page</h1>;
+const LoginPage = () => {
+    return <h1>Login Page</h1>;
 };
 
-export default HomePage;
+export default LoginPage;
 ```
 
 2. On your `App.js` include router component
@@ -113,14 +113,14 @@ import { AboutPage, HomePage, LoginPage } from './pages';
 
 export default [
     {
-        path: '/login',
+        path: ['/login', '/sign-in'],
         exact: true,
         component: LoginPage,
     },
     {
         path: '/',
         exact: true,
-        component: HomePage,
+        render: () => HomePage({ title: 'HomePage' }),
     },
     {
         path: '/about',
