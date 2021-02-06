@@ -3,14 +3,14 @@ import { AboutPage, ContactsPage, HomePage, LoginPage } from './pages';
 
 export default [
     {
-        path: '/login',
+        path: ['/login', '/sign-in'],
         exact: true,
         component: LoginPage,
     },
     {
         path: '/',
         exact: true,
-        component: HomePage,
+        render: () => HomePage({ title: 'HomePage' }),
     },
     {
         path: '/about',

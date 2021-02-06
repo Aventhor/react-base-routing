@@ -1,6 +1,5 @@
-export interface AppRoute {
-    path: string;
-    component?: any;
-    render?: any;
-    exact?: boolean;
+import { RouteProps } from 'react-router-dom';
+
+export interface AppRoute extends RouteProps {
+    // path: string;
 }

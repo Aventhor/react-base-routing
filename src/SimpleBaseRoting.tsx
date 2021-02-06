@@ -20,7 +20,7 @@ const SimpleBaseRouting: React.FC<SimpleBaseRoutingProps> = ({
             <Switch>
                 {isAppRoutes && (
                     <Route
-                        path={paths || pathsManager.getSimplePaths(routes)}
+                        path={paths || pathsManager.getPathsArray(routes)}
                         exact
                     >
                         {routes.map((route: AppRoute, index: number) => {

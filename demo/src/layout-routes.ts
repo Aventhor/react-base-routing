@@ -7,9 +7,9 @@ export default [
         layout: AuthLayout,
         routes: [
             {
-                path: '/login',
+                path: ['/login', '/sign-in'],
                 exact: true,
-                render: () => LoginPage({}),
+                component: LoginPage,
             },
         ],
     },
@@ -19,7 +19,7 @@ export default [
             {
                 path: '/',
                 exact: true,
-                component: HomePage,
+                render: () => HomePage({ title: 'HomePage' }),
             },
             {
                 path: '/about',

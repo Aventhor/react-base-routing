@@ -1,15 +1,16 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { LayoutRoute } from '../../interfaces/LayoutRoute';
+import { pathsManager } from '../../utils';
 
 const Layout: React.FC<LayoutRoute> = ({ layout: LayoutComponent, routes }) => {
-    const paths = routes.map((x) => x.path);
+    const paths = pathsManager.getPathsArray(routes);
 
     const layout = (
         <LayoutComponent>
             <Switch>
-                {routes.map((route) => (
-                    <Route key={route.path} {...route} />
+                {routes.map((route, i) => (
+                    <Route key={i} {...route} />
                 ))}
             </Switch>
         </LayoutComponent>

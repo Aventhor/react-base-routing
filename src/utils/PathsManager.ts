@@ -15,12 +15,25 @@ class PathsManager {
     ): boolean => {
         return routes.length === 0;
     };
-    public getSimplePaths(routes: AppRoute[]): string[] {
-        return routes.map((route) => route.path);
+
+    public getRoutePathsArray = (route: AppRoute): string[] => {
+        if (!route.path) return [];
+        if (route.path instanceof Array) {
+            return route.path.map((p) => p);
+        } else {
+            return [route.path];
+        }
+    };
+    public getPathsArray(routes: AppRoute[]): string[] {
+        return routes.map((route) => this.getRoutePathsArray(route)).flat(1);
     }
     public getLayoutPaths(routes: LayoutRoute[]): string[] {
         return routes
-            .map((layout) => layout.routes.map((route) => route.path))
+            .map((layout) =>
+                layout.routes
+                    .map((route) => this.getRoutePathsArray(route))
+                    .flat(1)
+            )
             .flat(1);
     }
 }
