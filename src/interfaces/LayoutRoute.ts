@@ -1,6 +1,7 @@
+import React from 'react';
 import { AppRoute } from './AppRoute';
 
 export interface LayoutRoute {
-    layout: any;
+    layout: React.ComponentType;
     routes: AppRoute[];
 }

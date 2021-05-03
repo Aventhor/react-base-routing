@@ -1,4 +1,5 @@
+import React from 'react';
 export interface RoutingProps {
-    notFoundPage?: any;
+    notFoundPage?: React.ComponentType;
     paths?: string[];
 }
